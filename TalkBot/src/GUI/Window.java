@@ -1,53 +1,36 @@
 package GUI;
 import javax.swing.JOptionPane;
 
-public class Window {
+	public class Window {
 
-    public static void msg(String msg) {
-        JOptionPane.showMessageDialog(null, msg);
-    }
+	//shows message in a Jpane
+	    public void msg(String msg) {
+	        JOptionPane.showMessageDialog(null, msg);
+	    }
+	//gives the player an input options
+	    public String in(String msg) {
+	        return JOptionPane.showInputDialog(msg);
+	    }
+	//creates two buttons to press
+	    public static int option(String[] options, String msg) {
+	        return JOptionPane.showOptionDialog(
+	                null,
+	                msg, // my message
+	                "Click a button", // dialog box title
+	                JOptionPane.DEFAULT_OPTION,
+	                JOptionPane.INFORMATION_MESSAGE,
+	                null,
+	                options, // possible options
+	                options[0]); // default option
+	    }
+	//prints msg on one ln, if other println is used afterwards will print on other line
+	    public void println(String msg) {
+	        System.out.println(msg);
+	    }
+	//prints out msg 
+	    public void print(String msg) {
+	        System.out.print(msg);
+	    }
 
-    public String in(String msg) {
-        return JOptionPane.showInputDialog(msg);
-    }
 
-    public static int option(String[] options, String msg) {
-        return JOptionPane.showOptionDialog(
-                null,
-                msg, // my message
-                "Click a button", // dialog box title
-                JOptionPane.DEFAULT_OPTION,
-                JOptionPane.INFORMATION_MESSAGE,
-                null,
-                options, // possible options
-                options[0]); // default option
-    }
-
-    public void println(String msg) {
-        System.out.println(msg);
-    }
-
-    public void print(String msg) {
-        System.out.println(msg);
-    }
-
-    public void msg(Object msg) {
-        JOptionPane.showMessageDialog(null, msg);
-    }
-
-    public String in(Object msg) {
-        return JOptionPane.showInputDialog(msg);
-    }
-
-    public int option(Object[] options, Object msg) {
-        return JOptionPane.showOptionDialog(
-                null,
-                msg, // my message
-                "Click a button", // dialog box title
-                JOptionPane.DEFAULT_OPTION,
-                JOptionPane.INFORMATION_MESSAGE,
-                null,
-                options, // possible options
-                options[0]); // default option
-    }
-}
+	}
